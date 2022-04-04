@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Text, View, Image, Pressable } from 'react-native';
+import moment from 'moment';
 import styles from './styles';
 
 export default function ChatRoomItem({ chatRoom }) {
@@ -15,7 +16,7 @@ export default function ChatRoomItem({ chatRoom }) {
     <View style={styles.rightContainer}>
       <View style={styles.row}>
         <Text style={styles.name}>{user.name}</Text>
-        <Text style={styles.text}>{chatRoom.lastMessage.createdAt}</Text>
+        <Text style={styles.text}>{moment(chatRoom.lastMessage.createdAt).format('DD/MM/YYYY')}</Text>
       </View>
       <Text numberOfLines={1} style={styles.text}>{chatRoom.lastMessage.content}</Text>
     </View>

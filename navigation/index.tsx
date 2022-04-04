@@ -53,7 +53,6 @@ const HomeHeader = () => {
     <View style={{
       flexDirection: 'row',
       justifyContent: 'space-between',
-      backgroundColor: 'red',
       width,
       padding: 10,
       alignItems: 'center'
@@ -77,7 +76,6 @@ const ChatRoomHeader = (props) => {
     <View style={{
       flexDirection: 'row',
       justifyContent: 'space-between',
-      backgroundColor: 'red',
       width: width - 50,
       marginLeft: -25,
       padding: 5,
